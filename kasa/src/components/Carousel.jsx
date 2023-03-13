@@ -32,6 +32,7 @@ function Carousel({ array, lenght }) {
       }}
     ></div>
   ) : (
+    <div className="carousel_container">
     <div
       className="gallery_container"
       style={{
@@ -41,8 +42,10 @@ function Carousel({ array, lenght }) {
         backgroundPositionY: "50%",
       }}
     >
+      <p className="indexImage">{currentIndex+1}/{lenght}</p>
       <FaChevronLeft className="gallery_icon" onClick={() => goBack()} />
       <FaChevronRight className="gallery_icon" onClick={() => goFurther()} />
+    </div>
     </div>
   );
 }
